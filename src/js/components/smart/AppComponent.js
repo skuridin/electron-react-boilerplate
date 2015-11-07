@@ -5,3 +5,7 @@ export default function AppComponent(props) {
     <div>{props.children}</div>
   );
 }
+
+AppComponent.propTypes = {
+  children: React.PropTypes.object.isRequired
+};
