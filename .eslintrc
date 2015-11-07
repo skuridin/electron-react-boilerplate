@@ -1,8 +1,6 @@
 {
   "env": {
     "node": true,
-    "browser": false,
-    "es6": false
   },
   "rules": {
     "comma-dangle": [2, "never"],
@@ -14,13 +12,5 @@
     "strict": [2, "global"],
     "no-console": 0
   },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "classes": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "templateStrings": true
-  },
-  "extends": "airbnb/legacy"
+  "extends": "airbnb/base"
 }
