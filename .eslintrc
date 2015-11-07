@@ -1,0 +1,26 @@
+{
+  "env": {
+    "node": true,
+    "browser": false,
+    "es6": false
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "new-cap": 0,
+    "object-curly-spacing": [2, "always"],
+    "space-in-parens": [2, "never"],
+    "arrow-spacing": 2,
+    "object-shorthand": 2,
+    "strict": [2, "global"],
+    "no-console": 0
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "templateStrings": true
+  },
+  "extends": "airbnb/legacy"
+}
