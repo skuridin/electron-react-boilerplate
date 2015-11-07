@@ -1,7 +1,4 @@
 {
-  "env": {
-    "node": true,
-  },
   "rules": {
     "comma-dangle": [2, "never"],
     "new-cap": 0,
@@ -12,8 +9,5 @@
     "strict": [2, "global"],
     "no-console": 0
   },
-  "ecmaFeatures": {
-    "modules": false
-  },
-  "extends": "airbnb/base"
+  "extends": "airbnb"
 }
