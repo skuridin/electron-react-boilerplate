@@ -3,13 +3,16 @@
 const config = require('./config.base');
 const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 config.devtool = 'eval';
 
 config.plugins.push(
   new webpack.NoErrorsPlugin(),
   new webpack.HotModuleReplacementPlugin(),
-  new HtmlPlugin()
+  new HtmlPlugin({
+    template: path.join(__dirname, '..', 'src', 'template.html')
+  })
 );
 
 config.module.loaders.push(
