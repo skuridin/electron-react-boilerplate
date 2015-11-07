@@ -15,9 +15,15 @@ config.plugins.push(
   new ExtractTextPlugin('assets/style.css')
 );
 
-config.module.loaders.push({
-  test: /\.css$/,
-  loader: ExtractTextPlugin.extract('css')
-});
+config.module.loaders.push(
+  {
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract('css')
+  },
+  {
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('css!sass')
+  }
+);
 
 module.exports = config;

@@ -12,10 +12,16 @@ config.plugins.push(
   new HtmlPlugin()
 );
 
-config.module.loaders.push({
-  test: /\.css$/,
-  loader: 'style!css'
-});
+config.module.loaders.push(
+  {
+    test: /\.css$/,
+    loader: 'style!css'
+  },
+  {
+    test: /\.scss$/,
+    loader: 'style!css!sass'
+  }
+);
 
 config.devServer = {
   hot: true,
