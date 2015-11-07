@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Router from 'react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import routes from './routes';
-const history = createBrowserHistory();
+import { Provider } from 'react-redux';
+import { ReduxRouter } from 'redux-router';
+import store from './store';
 
 render(
-  <Router routes={routes} history={history} />,
+  <Provider store={store}><ReduxRouter /></Provider>,
   document.getElementById('root')
 );

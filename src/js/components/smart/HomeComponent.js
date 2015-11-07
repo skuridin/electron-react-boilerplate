@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AppComponent() {
+export default function HomeComponent() {
   return (
     <h1>Home</h1>
   );
