@@ -1,4 +1,5 @@
-const path = require('path');
+'use strict';
+
 const express = require('express');
 const webpack = require('webpack');
 const config = require('./webpack.config');
@@ -10,7 +11,7 @@ const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, {
   noInfo: true,
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
 }));
 
 app.use(webpackHotMiddleware(compiler));
@@ -21,4 +22,4 @@ module.exports = cb => {
 
     cb(server);
   });
-}
+};

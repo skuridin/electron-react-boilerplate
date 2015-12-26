@@ -20,7 +20,7 @@ if (!PRODUCTION) {
 server(() => {
   app.on('window-all-closed', app.quit);
   app.on('ready', () => {
-    mainWindow = new BrowserWindow({width: 800, height: 600});
+    mainWindow = new BrowserWindow({ width: 800, height: 600 });
     mainWindow.loadURL(url);
     mainWindow.on('closed', () => mainWindow = null);
   });

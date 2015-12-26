@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb/base",
+  "ecmaFeatures": {
+    "modules": false
+  },
+  "rules": {
+    "strict": [2, "global"],
+    "no-console": 0
+  }
+}
