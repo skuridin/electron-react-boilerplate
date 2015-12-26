@@ -1,7 +1,9 @@
 {
   "private": true,
+  "main": "./index.js",
   "scripts": {
-    "lint": "eslint ./*.js ./src/"
+    "lint": "eslint ./*.js ./src/",
+    "dev": "NODE_ENV=development electron ."
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
