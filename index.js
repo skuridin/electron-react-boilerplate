@@ -13,16 +13,12 @@ if (process.env.NODE_ENV === 'development') {
   url = 'http://127.0.0.1:3000';
 }
 
-electron.crashReporter.start();
-
 const WINDOW_CONFIG = {
   width: 1000,
   height: 600,
-  minWidth: 1000,
-  minHeight: 600,
+  minWidth: 800,
+  minHeight: 500,
   show: false,
-  x: undefined,
-  y: undefined,
 };
 
 server(() => {
