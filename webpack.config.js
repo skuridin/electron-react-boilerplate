@@ -8,9 +8,11 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   context: path.join(__dirname, 'src'),
   entry: ['webpack-hot-middleware/client', './app.js'],
+  externals: ['electron'],
   output: {
     path: path.join(__dirname, 'dist'),
     'filename': 'bundle.js',
+    libraryTarget: 'commonjs2',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
