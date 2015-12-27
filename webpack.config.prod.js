@@ -13,6 +13,11 @@ const plugins = baseConfig.plugins.concat([
     },
   }),
   new ExtractTextPlugin('styles.css'),
+  new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify('production'),
+    },
+  }),
 ]);
 
 const loaders = baseConfig.module.loaders.concat([
