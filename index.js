@@ -19,8 +19,12 @@ if (process.env.NODE_ENV === 'development') {
 server(() => {
   app.on('window-all-closed', app.quit);
   app.on('ready', () => {
-    mainWindow = new BrowserWindow({ width: 800, height: 600 });
+    mainWindow = new BrowserWindow({ width: 800, height: 600, show: false });
     mainWindow.loadURL(url);
+    mainWindow.webContents.on('did-finish-load', () => {
+      mainWindow.show();
+      mainWindow.focus();
+    });
     mainWindow.on('closed', () => mainWindow = null);
   });
 });
